@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     title: `Best bikes`,
     description: ` `,
-    author: `@Catarino Carmona L.`,
+    author: `@Carmona L, Catarino`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact:{
       name: `Catarino Carmona L.`,
