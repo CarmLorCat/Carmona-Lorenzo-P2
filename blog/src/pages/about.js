@@ -12,7 +12,7 @@ const About =({data})=>{
         <Seo title="About us"/>
         <h1>About us</h1>
         <p>{`${company} was started by ${name} in 2024.`}</p>
-        <p>{`At ${company} we just make blogs!`}</p>
+        <p>{`At ${company} We review the best bikes for you!`}</p>
         <div style={{maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <StaticImage
         src="../images/gatsby-icon.png"
