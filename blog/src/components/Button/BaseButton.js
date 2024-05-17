@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Button} from 'rabass'
+import {Button} from 'rebass'
 import styled from 'styled-components'
 
 const Reset = styled(Button)`
