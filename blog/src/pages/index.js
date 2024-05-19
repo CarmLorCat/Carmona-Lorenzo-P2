@@ -9,12 +9,17 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
 const Grid = styled(Box)`
-box-sizing: border-box;
-margin: 0px;
-min-width: 0px;
-display:grid;
-gap: 100px;
-grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+display: grid;
+margin: 0;
+--w: 280px;
+--n: 2;
+gap: var(--size-gap);
+grid-template-columns: repeat(
+  auto-fit,
+  minmax(max(var(--w), 100%/ (var(--n) +1)+ 0.1%), 1fr)
+);
+margin-bottom: var(--size-gap);
+margin-top: var(--size-gap);
 `
 
 const IndexPage = ({data})=>(
@@ -23,7 +28,7 @@ const IndexPage = ({data})=>(
   <Grid>
   {
     data.allContentfulBlogPost.edges.map(edge=>(
-      <Card width= {256} p={3} key={edge.node.id}> 
+      <Card key={edge.node.id}> 
       <Link to={edge.node.slug}>
       <GatsbyImage
         image={edge.node.heroImage.gatsbyImageData}/>

@@ -13,7 +13,7 @@ padding: var(--space-4) var(--size-gutter);
 display: flex;
 align-items: center;
 justify-content: space-between;
-height: 50px;
+ 
 background: ${({theme})=> theme.variants.header.primary.backgroundColor};
 `
 //const StyledLink = styled(Link)`
@@ -23,11 +23,10 @@ background: ${({theme})=> theme.variants.header.primary.backgroundColor};
 //`
 
 const StyledLink = styled(Link)`
-color: white;
+ 
 text-decoration:none;
 margin:0 10px;
-&:hover {
-  color: lightgray:
+color: ${({theme})=> theme.variants.header.primary.color};
 }
 `
 const Image = styled.img`
@@ -49,7 +48,7 @@ const MediaQuery = styled.div`
 const Header = ({ siteTitle }) => (
   <StyledHeader>
   <Section flex>
-  <Section width ={1/2}
+  <Section width ={1/12}
   flex flexDirection = "column" justifyContent= "center">
   <ThemeConsumer>
   {theme => <Image src={theme.images.mainHeaderImage}/>}
